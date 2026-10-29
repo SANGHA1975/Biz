@@ -1,4 +1,4 @@
-name: 매일 공고 수집
+name: Jemina Insight News Summary
 
 on:
   schedule:
@@ -16,6 +16,5 @@ jobs:
       - run: pip install -r requirements.txt
       - run: python main.py
         env:
-          BIZINFO_API_KEY: ${{ secrets.BIZINFO_API_KEY }}
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DB_ID: ${{ secrets.NOTION_DB_ID }}
